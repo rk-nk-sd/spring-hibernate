@@ -21,7 +21,6 @@ public class User {
    private String email;
 
    @OneToOne(cascade = CascadeType.ALL)
-//   @PrimaryKeyJoinColumn
    @MapsId
    private Car car;
 
@@ -69,4 +68,5 @@ public class User {
    public Car getCar() {
       return car;
    }
+
 }

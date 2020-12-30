@@ -33,6 +33,20 @@ public class MainApp {
          System.out.println();
       }
 
+      System.out.println("Определяем пользователя по марке и серии автомобиля...");
+      System.out.println("Нас будет интересовать 5 модель жигулей");
+      for (User user : users) {
+         if(user.getCar().getModel().equals("VAZ 2105") && user.getCar().getSeries() == 5) {
+            System.out.println("Id = "+user.getId());
+            System.out.println("First Name = "+user.getFirstName());
+            System.out.println("Last Name = "+user.getLastName());
+            System.out.println("Email = "+user.getEmail());
+            System.out.println("Has model = "+user.getCar().getModel()+", series = "+user.getCar().getSeries());
+            System.out.println();
+         }
+
+      }
+
       context.close();
    }
 }
