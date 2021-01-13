@@ -5,9 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="cars")
 public class Car {
-//    @OneToOne
-//    @PrimaryKeyJoinColumn
-//    private User user;
+
+    @OneToOne(mappedBy = "car")
+    private User user;
 
     @Id
     @Column(name = "id")
@@ -44,13 +44,13 @@ public class Car {
         this.series = series;
     }
 
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     @Override
     public String toString() {
